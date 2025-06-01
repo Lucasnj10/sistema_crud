@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário Cliente</title>
+</head>
+<body>
+    <h1>Cliente</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Salvar</button>
+    </form>
+    <a href="{% url 'cliente_list' %}">Voltar</a>
+</body>
+</html>

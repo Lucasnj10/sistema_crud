@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Excluir Venda</h1>
+
+<p>Tem certeza que deseja excluir a venda de {{ venda.cliente.nome }} para {{ venda.produto.nome }}?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirmar Exclusão</button>
+    <a href="{% url 'lista_vendas' %}">Cancelar</a>
+</form>
+{% endblock %}
